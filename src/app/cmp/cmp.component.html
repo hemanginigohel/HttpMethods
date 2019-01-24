@@ -1,0 +1,38 @@
+<hr>
+name_putdata:<input #name1 />
+
+<button (click)="putdata1(name1.value); name1.value=''">
+  putdata
+</button>
+
+<hr>
+name_patchdata:<input #name2 />
+
+<button (click)="patchdata1(name2.value); name2.value=''">
+  patchdata
+</button>
+
+<!-- <button (click)="deletedatas()" type="submit">delete</button><div> -->
+<hr>
+name:<input #name />
+<!-- (click) passes input value to add() and then clears the input -->
+<button (click)="putting(name.value); name.value=''">
+  add
+</button>
+
+<hr>
+<li *ngFor="let arrs of arr">
+  <!-- <button (click)="updatePost(post)">
+    Update
+  </button><br /> -->
+
+  <button (click)="deletedata1(arrs)" type="submit">delete</button>
+  <!-- 
+  <br />page : {{arr.page}}<br />per_page : {{arr.per_page}}<br />total : {{arr.total}}<br />total_pages :
+  {{arr.total_pages}} -->
+  <!-- <br />id : {{arrs.id}}<br />first_name : {{arrs.first_name}}<br />last_name : {{arrs.last_name}}<br />avatar :
+  {{arrs.avatar}} -->
+  {{arrs.title}}
+</li>
+<!-- <button class="delete" title="delete hero"
+  (click)="delete(hero)">Delete</button> -->
